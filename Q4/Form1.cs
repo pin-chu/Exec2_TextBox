@@ -16,10 +16,26 @@ namespace Q4
         {
             InitializeComponent();
         }
+		private void CalcButton_Click(object sender, EventArgs e)
+		{
+            int cars = Convert.ToInt32(CinputTextBox.Text);
+            int people = Convert.ToInt32(PinputTextBox.Text);
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            const int carsfee = 200;
+            const int peoplefee = 60;
+            var carstotal = cars * carsfee;
+            var peopletotal = people * peoplefee;
+            if (carstotal < peopletotal)
+            {
+                MessageBox.Show("總計:" + carstotal);
+            }
+            else
+            {
+                MessageBox.Show("總計:" + peopletotal);
+            }
 
-        }
-    }
+
+            
+		}
+	}
 }
